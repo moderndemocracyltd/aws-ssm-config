@@ -1,6 +1,6 @@
 {
   "name": "aws-ssm-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AWS SSM Configuration Client, allowing creation and retrieval of configuration values, and additionally caching those values",
   "main": "./lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/aws-ssm-config",
