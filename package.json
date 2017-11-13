@@ -1,6 +1,6 @@
 {
   "name": "aws-ssm-config",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "AWS SSM Configuration Client, allowing creation and retrieval of configuration values, and additionally caching those values",
   "main": "./lib/index.js",
   "repository": "https://github.com/moderndemocracyltd/aws-ssm-config",
@@ -9,16 +9,21 @@
   "private": false,
   "dependencies": {
     "aws-sdk": "^2.149.0",
-    "babel-preset-env": "^1.6.1",
     "ms": "^2.0.0",
     "promise-memoize": "^1.2.1"
   },
   "devDependencies": {
+    "aws-sdk-mock": "^1.7.0",
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
   },
   "scripts": {
     "build": "babel src -d lib",
+    "test": "yarn build && yarn mocha --compilers js:babel-core/register",
     "prepublish": "yarn build"
   }
 }
