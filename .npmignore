@@ -1,0 +1,3 @@
+#Dont package the src or test directories
+src/
+test/
